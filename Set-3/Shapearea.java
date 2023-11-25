@@ -20,30 +20,26 @@ class Shapearea
         System.out.println("Select Shape: ");
         System.out.println("Press 1 for Circle\nPress 2 for Rectangle\nPress 3 for Triangle");
         int n = SC.nextInt();
-        if(n==1)
-        {
-            System.out.print("Enter radius of circle: ");
-            float r = SC.nextInt();
-            S.area(r);
-        }
-        else if(n==2)
-        {
-            System.out.print("Enter length & breadth of rectangle: ");
-            int l = SC.nextInt();
-            int b = SC.nextInt();
-            S.area(l,b);
-        }
-        else if(n==3)
-        {
-            System.out.print("Enter base length & height of triangle: ");
-            float b = SC.nextInt();
-            float h = SC.nextInt();
-            S.area(b,h);
-        }
-        else 
-        {
-            System.out.print("Enter valid input!");
-            return;
+        switch(n) {
+            case 1:
+                System.out.print("Enter radius of circle: ");
+                float r = SC.nextInt();
+                S.area(r);
+                break;
+            case 2:
+                System.out.print("Enter length & breadth of rectangle: ");
+                int l = SC.nextInt();
+                int b = SC.nextInt();
+                S.area(l,b);
+                break;
+            case 3:
+                System.out.print("Enter base length & height of triangle: ");
+                float B = SC.nextFloat();
+                float H = SC.nextFloat();
+                S.area(B,H);
+                break;
+            default:
+                System.out.print("Enter valid input!");
         }
     }
 }
